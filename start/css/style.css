@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 100px solid #18AE18; 
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pontos, .score{
+    position: absolute;
+    top: 60%;
+    font-size: 30px;
+    color: blue;
+    background: white;
+    z-index: 4;
+}
+
+.pontos {
+    left: 80%;
+}
+
+.score{
+    left: 70%;
+}
+
+.mensagem{
+    position: absolute;
+    background: white;
+    top: 73%;
+    left: 5%;
+    color: blue;
+    z-index: 5;
+}
+
+.garrafaStartse {
+    position: absolute;
+    bottom: 0;
+    width: 30px; /*80*/
+    animation: garrafa-animation 4s infinite linear;  /*1.5*/
+    z-index: 5;
+}
+
+.boneco {
+    width: 80px; /*150*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.jump-boneco {
+    animation: boneco-animation 800ms ease-in-out; /*500*/
+    z-index: 5;
+}
+
+.cloud-game {
+    position: absolute;
+    width: 250px;
+    animation: clouds-animation 20s infinite linear;
+    z-index: 2;
+}
+
+.aviao {
+    position: absolute;
+    width: 150px;
+    top: 20px;
+    animation: aviao-animation 10s infinite linear;
+    z-index: 1;
+}
+
+.cidade{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+    z-index: 3;
+}
+
+.floresta{
+    position: absolute;
+    width: 200%;
+    z-index: 4;
+    animation: floresta-animation 20s linear infinite;
+    bottom: 0;
+}
+
+@keyframes floresta-animation{
+    from {
+        right: -200%;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes garrafa-animation {
+    from {
+        right: -30px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -150px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes aviao-animation{
+    from{
+        right: -150px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes boneco-animation{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    70%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
